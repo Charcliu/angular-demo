@@ -1,3 +1,10 @@
-<p>
-  hero-detail works!
-</p>
+<div *ngIf="hero">
+  <span>{{hero.name| uppercase}} Details</span>
+  <span>id: </span>{{hero.id}}
+  <span>name: </span>{{hero.name}}
+  <!-- [(ngModel)] 是 Angular 的双向数据绑定语法。 -->
+  <label>name:
+    <input [(ngModel)]="hero.name" placeholder="name">
+  </label>
+  <button (click)="goBack()">go back</button>
+</div>
